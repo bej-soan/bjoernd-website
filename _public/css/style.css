@@ -1,0 +1,72 @@
+:root {
+  --font-main: "IBM Plex Sans", sans-serif;
+  --font-headline: "IBM Plex Serif", serif;
+  --font-weight-default: 400;
+  --font-weight-bold: 600;
+  --col-element-1: #1D2127;
+  --col-element-2: #6e788b;
+  --col-surface-1: #f2f0ef;
+  --col-primary-1: #D4145A;
+  --col-headline-color: --var-element-1;
+}
+
+/* ibm-plex-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/ibm-plex-sans-v14-latin-regular.eot"); /* IE9 Compat Modes */
+  src: url("../assets/fonts/ibm-plex-sans-v14-latin-regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/ibm-plex-sans-v14-latin-regular.woff2") format("woff2"), url("../assets/fonts/ibm-plex-sans-v14-latin-regular.woff") format("woff"), url("../assets/fonts/ibm-plex-sans-v14-latin-regular.ttf") format("truetype"), url("../assets/fonts/ibm-plex-sans-v14-latin-regular.svg#IBMPlexSans") format("svg"); /* Legacy iOS */
+}
+/* ibm-plex-sans-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/ibm-plex-sans-v14-latin-500.eot"); /* IE9 Compat Modes */
+  src: url("../assets/fonts/ibm-plex-sans-v14-latin-500.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/ibm-plex-sans-v14-latin-500.woff2") format("woff2"), url("../assets/fonts/ibm-plex-sans-v14-latin-500.woff") format("woff"), url("../assets/fonts/ibm-plex-sans-v14-latin-500.ttf") format("truetype"), url("../assets/fonts/ibm-plex-sans-v14-latin-500.svg#IBMPlexSans") format("svg"); /* Legacy iOS */
+}
+/* ibm-plex-sans-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../assets/fonts/ibm-plex-sans-v14-latin-600.eot"); /* IE9 Compat Modes */
+  src: url("../assets/fonts/ibm-plex-sans-v14-latin-600.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/ibm-plex-sans-v14-latin-600.woff2") format("woff2"), url("../assets/fonts/ibm-plex-sans-v14-latin-600.woff") format("woff"), url("../assets/fonts/ibm-plex-sans-v14-latin-600.ttf") format("truetype"), url("../assets/fonts/ibm-plex-sans-v14-latin-600.svg#IBMPlexSans") format("svg"); /* Legacy iOS */
+}
+/* ibm-plex-serif-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "IBM Plex Serif";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../assets/fonts/ibm-plex-serif-v15-latin-600.eot"); /* IE9 Compat Modes */
+  src: url("../assets/fonts/ibm-plex-serif-v15-latin-600.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/ibm-plex-serif-v15-latin-600.woff2") format("woff2"), url("../assets/fonts/ibm-plex-serif-v15-latin-600.woff") format("woff"), url("../assets/fonts/ibm-plex-serif-v15-latin-600.ttf") format("truetype"), url("../assets/fonts/ibm-plex-serif-v15-latin-600.svg#IBMPlexSerif") format("svg"); /* Legacy iOS */
+}
+body {
+  font-family: var(--font-main);
+  background-color: var(--col-surface-1);
+  color: var(--col-element-1);
+}
+
+h1 {
+  font-family: var(--font-headline);
+  font-weight: var(--font-weight-bold);
+  color: var(--col-headline-color);
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.branding__logo {
+  max-width: 60px;
+  height: auto;
+}
+.branding__logo svg {
+  width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=style.css.map */

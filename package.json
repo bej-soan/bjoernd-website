@@ -4,8 +4,10 @@
   "description": "Featuring absolutely nothing beyond a base HTML5 template and the essential setup to watch and compile your Sass alongside 11ty.",
   "main": "index.html",
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "watch:eleventy": "npx @11ty/eleventy --serve",
+    "watch:sass": "npx sass src/sass:_public/css --watch",
+    "start": "npm run watch:eleventy & npm run watch:sass"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,8 @@
   "browserslist": [
     "> 0.2%",
     "not dead"
-  ]
+  ],
+  "devDependencies": {
+    "@11ty/eleventy-navigation": "^0.3.5"
+  }
 }

@@ -8,7 +8,12 @@
 </head>
 <body>
 	<header>
+		{% include 'template-parts/bd-logo.njk' %}
 		<h1>{{ title }}</h1>
+
+		{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+
+
 	</header>
 	<main>
 	{{ content | safe }}

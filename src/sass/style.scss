@@ -1,0 +1,25 @@
+@import '_abstracts/abstracts';
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--col-surface-1);
+  color: var(--col-element-1);
+}
+
+h1 {
+  font-family: var(--font-headline);
+  font-weight: var(--font-weight-bold);
+  color: var(--col-headline-color);
+  width: fit-content;
+  margin-inline: auto;
+}
+
+
+.branding__logo {
+  max-width: 60px;
+  height: auto;
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}

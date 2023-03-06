@@ -1,16 +1,45 @@
-
-
 :root {
   --font-main : 'IBM Plex Sans', sans-serif;
   --font-headline : 'IBM Plex Serif', serif;
   --font-weight-default: 400;
   --font-weight-bold : 600;
-  --col-element-1 : #1D2127;
-  --col-element-2 : #6e788b;
-  --col-surface-1 : #f2f0ef;
-  --col-primary-1 : #D4145A;
-  --col-headline-color : --var-element-1;
+
+  --col-primary-1-lightmode: #D4145A;
+  --col-primary-1-darkmode: #CB2662;
+
+  --col-highlight: #fff115; 
+
+  --col-black: #1D2127;
+
+  --col-darkgrey: #565B65;
+  --col-midgrey: #9EA0AA;
+  --col-lightgrey: #D6D7E6;
+  --col-white: #F8F8F8;
+
+  --col-element-1 : var(--col-white);
+  --col-element-2 : var(--col-lightgrey);
+  --col-element-3 : var(--col-midgrey);
+  --col-element-4 : var(--col-darkgrey);
+
+  --col-surface-1 : var(--col-black);
+  --col-primary-1 : var(--col-primary-1-darkmode);
+
+  --col-headline-color : var(--col-element-1);
+
+  --font-size-s: clamp(0.83rem, 0.15vw + 0.8rem, 0.9rem);
+  --font-size-base: clamp(1rem, 0.29vw + 0.93rem, 1.13rem);
+  --font-size-sm: clamp(1.2rem, 0.47vw + 1.08rem, 1.41rem);
+  --font-size-m: clamp(1.44rem, 0.73vw + 1.26rem, 1.76rem);
+  --font-size-l: clamp(1.73rem, 1.07vw + 1.46rem, 2.2rem);
+  --font-size-xl: clamp(2.07rem, 1.54vw + 1.69rem, 2.75rem);
+  --font-size-xxl: clamp(2.49rem, 2.16vw + 1.95rem, 3.43rem);
+
+  /* 
+  https://www.fluid-type-scale.com/calculate?minFontSize=16&minWidth=400&minRatio=1.20&maxFontSize=18&maxWidth=1100&maxRatio=1.25&steps=s%2Cbase%2Csm%2Cm%2Cl%2Cxl%2Cxxl&baseStep=base&prefix=font-size&decimals=2&useRems=on&remValue=16&previewFont=IBM+Plex+Sans
+  */
 }
+
+$breakpoint : "600px";
 
 
 /* ibm-plex-sans-regular - latin */

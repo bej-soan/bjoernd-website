@@ -1,17 +1,41 @@
 @import '_abstracts/abstracts';
 
+::selection {
+  background: var(--col-highlight);
+  color: var(--col-black);
+}
+::-moz-selection {
+  background: var(--col-highlight);
+  color: var(--col-black);
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: var(--font-main);
   background-color: var(--col-surface-1);
-  color: var(--col-element-1);
+  color: var(--col-element-2);
+  line-height: 1.5;
+  font-size: var(--font-size-base);
 }
-
 h1 {
   font-family: var(--font-headline);
   font-weight: var(--font-weight-bold);
   color: var(--col-headline-color);
-  width: fit-content;
-  margin-inline: auto;
+  font-size: var(--font-size-l);
+}
+h2 {
+  font-weight: var(--font-weight-default);
+  font-size: var(--font-size-sm);
+  color: var(--col-element-3);
+}
+h3 {
+  font-weight: var(--font-weight-default);
+  font-size: var(--font-size-sm);
+}
+h4 {
+  font-weight: var(--font-weight-default);
+  font-size: var(--font-size-base);
 }
 
 
@@ -21,5 +45,73 @@ h1 {
   svg {
     width: 100%;
     height: auto;
+  }
+  opacity: 0.1;
+}
+
+
+.page__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "sidebar"
+  "content";
+  grid-gap: 1em;
+  max-width: 68.750em;
+  margin: 0 auto;
+  padding: 1em;
+  @media only screen and (min-width: $breakpoint) {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "sidebar content";
+  }
+}
+
+.page__header {
+  grid-area: sidebar;
+  @media only screen and (min-width: $breakpoint) {
+    position: fixed;
+  }
+ 
+}
+.content__wrapper {
+  grid-area: content;
+}
+
+a {
+  color: var(--col-element-1);
+  text-decoration: none;
+  position: relative;
+  transition: color 300ms ease 0s;
+  &:after {
+    content: '';
+    border-bottom: 1px solid var(--col-primary-1);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  &:hover {
+    color: var(--col-primary-1);
+  }
+}
+
+.site__title {
+  font-size: var(--font-size-xl);
+  margin-top: 0;
+  margin-bottom: 0em;
+}
+.site_subtitle {
+  margin-top: 0em;
+  margin-bottom: 2em;
+}
+section {
+  margin-bottom: 3em;
+}
+
+.project-grid__wrapper {
+  display: block;
+  @media only screen and (min-width: $breakpoint) {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: 1fr 1fr;
   }
 }

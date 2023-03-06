@@ -3,11 +3,31 @@
   --font-headline: "IBM Plex Serif", serif;
   --font-weight-default: 400;
   --font-weight-bold: 600;
-  --col-element-1: #1D2127;
-  --col-element-2: #6e788b;
-  --col-surface-1: #f2f0ef;
-  --col-primary-1: #D4145A;
-  --col-headline-color: --var-element-1;
+  --col-primary-1-lightmode: #D4145A;
+  --col-primary-1-darkmode: #CB2662;
+  --col-highlight: #fff115;
+  --col-black: #1D2127;
+  --col-darkgrey: #565B65;
+  --col-midgrey: #9EA0AA;
+  --col-lightgrey: #D6D7E6;
+  --col-white: #F8F8F8;
+  --col-element-1: var(--col-white);
+  --col-element-2: var(--col-lightgrey);
+  --col-element-3: var(--col-midgrey);
+  --col-element-4: var(--col-darkgrey);
+  --col-surface-1: var(--col-black);
+  --col-primary-1: var(--col-primary-1-darkmode);
+  --col-headline-color: var(--col-element-1);
+  --font-size-s: clamp(0.83rem, 0.15vw + 0.8rem, 0.9rem);
+  --font-size-base: clamp(1rem, 0.29vw + 0.93rem, 1.13rem);
+  --font-size-sm: clamp(1.2rem, 0.47vw + 1.08rem, 1.41rem);
+  --font-size-m: clamp(1.44rem, 0.73vw + 1.26rem, 1.76rem);
+  --font-size-l: clamp(1.73rem, 1.07vw + 1.46rem, 2.2rem);
+  --font-size-xl: clamp(2.07rem, 1.54vw + 1.69rem, 2.75rem);
+  --font-size-xxl: clamp(2.49rem, 2.16vw + 1.95rem, 3.43rem);
+  /* 
+  https://www.fluid-type-scale.com/calculate?minFontSize=16&minWidth=400&minRatio=1.20&maxFontSize=18&maxWidth=1100&maxRatio=1.25&steps=s%2Cbase%2Csm%2Cm%2Cl%2Cxl%2Cxxl&baseStep=base&prefix=font-size&decimals=2&useRems=on&remValue=16&previewFont=IBM+Plex+Sans
+  */
 }
 
 /* ibm-plex-sans-regular - latin */
@@ -46,27 +66,132 @@
   src: url("../assets/fonts/ibm-plex-serif-v15-latin-600.eot"); /* IE9 Compat Modes */
   src: url("../assets/fonts/ibm-plex-serif-v15-latin-600.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/ibm-plex-serif-v15-latin-600.woff2") format("woff2"), url("../assets/fonts/ibm-plex-serif-v15-latin-600.woff") format("woff"), url("../assets/fonts/ibm-plex-serif-v15-latin-600.ttf") format("truetype"), url("../assets/fonts/ibm-plex-serif-v15-latin-600.svg#IBMPlexSerif") format("svg"); /* Legacy iOS */
 }
+::selection {
+  background: var(--col-highlight);
+  color: var(--col-black);
+}
+
+::-moz-selection {
+  background: var(--col-highlight);
+  color: var(--col-black);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-main);
   background-color: var(--col-surface-1);
-  color: var(--col-element-1);
+  color: var(--col-element-2);
+  line-height: 1.5;
+  font-size: var(--font-size-base);
 }
 
 h1 {
   font-family: var(--font-headline);
   font-weight: var(--font-weight-bold);
   color: var(--col-headline-color);
-  width: fit-content;
-  margin-inline: auto;
+  font-size: var(--font-size-l);
+}
+
+h2 {
+  font-weight: var(--font-weight-default);
+  font-size: var(--font-size-sm);
+  color: var(--col-element-3);
+}
+
+h3 {
+  font-weight: var(--font-weight-default);
+  font-size: var(--font-size-sm);
+}
+
+h4 {
+  font-weight: var(--font-weight-default);
+  font-size: var(--font-size-base);
 }
 
 .branding__logo {
   max-width: 60px;
   height: auto;
+  opacity: 0.1;
 }
 .branding__logo svg {
   width: 100%;
   height: auto;
+}
+
+.page__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "sidebar" "content";
+  grid-gap: 1em;
+  max-width: 68.75em;
+  margin: 0 auto;
+  padding: 1em;
+}
+@media only screen and (min-width: 600px) {
+  .page__wrapper {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "sidebar content";
+  }
+}
+
+.page__header {
+  grid-area: sidebar;
+}
+@media only screen and (min-width: 600px) {
+  .page__header {
+    position: fixed;
+  }
+}
+
+.content__wrapper {
+  grid-area: content;
+}
+
+a {
+  color: var(--col-element-1);
+  text-decoration: none;
+  position: relative;
+  transition: color 300ms ease 0s;
+}
+a:after {
+  content: "";
+  border-bottom: 1px solid var(--col-primary-1);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+a:hover {
+  color: var(--col-primary-1);
+}
+
+.site__title {
+  font-size: var(--font-size-xl);
+  margin-top: 0;
+  margin-bottom: 0em;
+}
+
+.site_subtitle {
+  margin-top: 0em;
+  margin-bottom: 2em;
+}
+
+section {
+  margin-bottom: 3em;
+}
+
+.project-grid__wrapper {
+  display: block;
+}
+@media only screen and (min-width: 600px) {
+  .project-grid__wrapper {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

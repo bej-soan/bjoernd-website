@@ -7,16 +7,18 @@
 	<link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
 </head>
 <body>
-	<header>
-		{% include 'template-parts/bd-logo.njk' %}
-		<h1>{{ title }}</h1>
+	<div class="page__wrapper">
+		<header class="page__header">
+			{% include 'template-parts/bd-logo.njk' %}
+			
 
-		{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+			{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
 
 
-	</header>
-	<main>
-	{{ content | safe }}
-	</main>
+		</header>
+		<main class="content__wrapper">
+		{{ content | safe }}
+		</main>
+	</div>
 </body>
 </html>

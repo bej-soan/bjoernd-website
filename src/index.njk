@@ -5,49 +5,132 @@ eleventyNavigation:
   key: Home
 ---
 
-<section class="section__intro">
-  <h1 id="intro" class="site__title">Björn Dammann</h1>
-  <h2 class="site_subtitle">Art Director / UI/UX Designer / Frontend Developer</h2>
-  <p>Ich bin Björn Dammann und mache Webkram für die <a href="https://roggeundpott.de/" target="_blank">ROGGE & POTT Design Group.</a></p>
+<header class="page__header">
+  <div class="header__branding textarea-limit-width">
 
-  <p>Sonst mache ich noch Hamburg-Klamotten unter altona trashletics, sammel Sneaker Läden auf Sneaker-Stores.de, Kontakte auf Xing und rechtliche Angaben im Impressum und der Datenschutzerklärung.</p>
-
-  <p>Schreiben kannst du mir hier.</p>
-</section>
-
-<section class="section__sideprojects">
-  <h1 id="sideprojects">Sideprojects</h1>
-  <p>I like working on the occasional side project. Here are some things I’ve made:</p>
-
-  <div class="project-grid__wrapper">
-
-    <div class="project-grid__single-project">
-
-      <div class="project-grid__project-image-wrapper">
-        
-      </div>
-
-      <h3 class="project-grid__title">Text</h3>
-      <p class="project-grid__subtitle">subtitle</p>
-
-      <a href="" class="project-grid__link">Link</a>
-
-    </div>
-
-    <div class="project-grid__single-project">
-
-      <div class="project-grid__project-image-wrapper">
-        
-      </div>
-
-      <h3 class="project-grid__title">Text</h3>
-      <p class="project-grid__subtitle">subtitle</p>
-
-      <a href="" class="project-grid__link">Link</a>
-
-    </div>
-
+    <h1 id="intro" class="site__title">Björn Dammann</h1>
+    <h2 class="site_subtitle">Art Director / UI/UX Designer / Frontend Developer</h2>
+    <p>Ich bin Björn Dammann und mache Webkram für die <a href="https://roggeundpott.de/" target="_blank">ROGGE & POTT Design Group.</a></p>
   </div>
+  {% include 'template-parts/dark-mode-button.njk' %}
+  
+</header>
+
+<main class="content-inner__wrapper">
+  <section class="section__intro">
+    <div class="textarea-limit-width">
+      <p>Sonst mache ich noch Hamburg-Klamotten unter altona trashletics, sammel Sneaker Läden auf Sneaker-Stores.de, Kontakte auf Xing und rechtliche Angaben im Impressum und der Datenschutzerklärung.</p>
+
+      <p>Schreiben kannst du mir hier.</p>
+    </div>
+  </section>
+
+  <section class="section__sideprojects">
+    <h1 id="sideprojects">Sideprojects</h1>
+    <p>I like working on the occasional side project. Here are some things I’ve made:</p>
+
+    <ul class="project-grid__wrapper project-grid__wrapper--3-columns ">
+
+      {% for sideproject in projects.sideprojects %}
+
+        <li class="project-card">
+
+          <div class="project-card__project-image-wrapper">
+            
+            <img class="project-card__project-image"
+              srcset="/images/{{ sideproject.image }}@0,25x.jpg 576w,
+                    /images/{{ sideproject.image }}@0,5x.jpg 960w,
+                    /images/{{ sideproject.image }}@0,75x.jpg 1440w,
+                    /images/{{ sideproject.image }}.jpg 1920w"
+              src="/images/{{ sideproject.image }}.jpg"
+              alt="{{ sideproject.name }}" loading="lazy">
+          </div>
+
+          <h3 class="project-card__title">{{ sideproject.name }}</h3>
+          <p class="project-card__subtitle">{{ sideproject.subtitle }}</p>
+
+          <a class="project-card__link" href="{{ sideproject.href }}">{{ sideproject.clean }}</a>
+
+        </li>
+        
+      {% endfor %}
 
 
-</section>
+    </ul>
+
+  </section>
+
+
+  <section class="section__websites">
+    <h1 id="websites">Websites von mir</h1>
+    <p>Für Rogge & Pott Design habe ich schon viele hübsche Websites gemacht. Das sind meine Favoriten.</p>
+
+    <ul class="project-grid__wrapper project-grid__wrapper--6-columns ">
+
+      {% for website in projects.websites %}
+
+        <li class="project-card">
+
+          <div class="project-card__project-image-wrapper">
+            
+            <img class="project-card__project-image"
+              srcset="/images/{{ website.image }}@0,25x.jpg 576w,
+                    /images/{{ website.image }}@0,5x.jpg 960w,
+                    /images/{{ website.image }}@0,75x.jpg 1440w,
+                    /images/{{ website.image }}.jpg 1920w"
+              src="/images/{{ website.image }}.jpg"
+              alt="{{ website.name }}" loading="lazy">
+          </div>
+
+          <h3 class="project-card__title">{{ website.name }}</h3>
+          <p class="project-card__subtitle">{{ website.subtitle }}</p>
+
+          <a class="project-card__link" href="{{ website.href }}">{{ website.clean }}</a>
+
+        </li>
+        
+      {% endfor %}
+
+
+    </ul>
+
+
+  </section>
+
+
+  <section class="section__kleinkrams">
+    <h1 id="kleineprojekte">Kleine Projekte</h1>
+    <p>Manchmal mache ich auch andere Sachen als Websites für mich oder Kunden. </p>
+
+    <ul class="project-grid__wrapper project-grid__wrapper--4-columns ">
+
+      {% for kleinkram in projects.kleinkrams %}
+
+        <li class="project-card">
+
+          <div class="project-card__project-image-wrapper">
+            
+            <img class="project-card__project-image"
+              srcset="/images/{{ kleinkram.image }}@0,5x.jpg 960w,
+                    /images/{{ kleinkram.image }}@0,75x.jpg 1440w,
+                    /images/{{ kleinkram.image }}.jpg 1920w"
+              src="/images/{{ kleinkram.image }}.jpg"
+              alt="{{ kleinkram.name }}" loading="lazy">
+          </div>
+
+          <h3 class="project-card__title">{{ kleinkram.name }}</h3>
+          <p class="project-card__subtitle">{{ kleinkram.subtitle }}</p>
+
+          <a class="project-card__link" href="{{ kleinkram.href }}">{{ kleinkram.clean }}</a>
+
+        </li>
+        
+      {% endfor %}
+
+
+    </ul>
+
+
+  </section>
+
+</main>

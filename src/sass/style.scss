@@ -11,6 +11,25 @@
 html {
   scroll-behavior: smooth;
 }
+html.light {
+  .project-card__project-image {
+    box-shadow: 5px 3px 6px #00000010;
+  }
+}
+
+html.light {
+  button.theme-light {
+    display: none;
+  }
+}
+html.dark {
+  button.theme-dark {
+    display: none;
+  }
+}
+
+
+
 body {
   font-family: var(--font-main);
   background-color: var(--col-surface-1);
@@ -46,34 +65,106 @@ h4 {
     width: 100%;
     height: auto;
   }
-  opacity: 0.1;
+  opacity: 1;
 }
+.branding__link {
+  text-decoration: none;
+  display: inline-block;
+  &:after {
+    border-bottom: none !important;
+  }
+  
+  @media (hover: hover) {
+    
+    transition: margin-top 300ms ease-out 0s;
+    margin-top: 0px;
+    &:hover {
+      margin-top: -10px;
+    }
+  }
+}
+
 
 
 .page__wrapper {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "sidebar"
-  "content";
-  grid-gap: 1em;
-  max-width: 68.750em;
+  "content"
+  "footer";
+  grid-gap: 5%;
   margin: 0 auto;
-  padding: 1em;
-  @media only screen and (min-width: $breakpoint) {
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: "sidebar content";
+  padding: 5%;
+  @media only screen and (min-width: $breakpoint-m) {
+    grid-template-columns: 10% auto;
+    grid-template-areas: "sidebar content"
+    "nix footer";
   }
 }
 
-.page__header {
+.page__sidebar {
   grid-area: sidebar;
-  @media only screen and (min-width: $breakpoint) {
+  @media only screen and (min-width: $breakpoint-m) {
     position: fixed;
   }
  
 }
+.page__header {
+  display: flex;
+  justify-content: space-between;
+}
+.header__dark-mode-wrapper {
+  font-size: var(--font-size-s);
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  @media only screen and (min-width: $breakpoint-m) {
+    position: relative;
+    right: unset;
+    top: unset;
+  }
+}
+
+
+
+.icon-fill {
+  transition: fill 300ms ease 0s;
+  fill: var(--col-element-3);
+} 
+.dark-mode__button {
+  padding: 1em 0 1em 0.5em;
+  transition: color 300ms ease 0s;
+  background-color: transparent;
+  border: 0;
+  color: var(--col-element-3);
+  display: flex;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.dark-mode__button:hover {
+  color: var(--col-element-1);
+  .icon-fill {
+    fill: var(--col-primary-1);
+  }
+}
+.dark-mode__icon-wrapper {
+  margin-left: 0.5em;
+}
+.dark-mode__icon-wrapper svg {
+  width: 18px;
+  height: auto;
+}
+
+
+
 .content__wrapper {
   grid-area: content;
+}
+
+.textarea-limit-width {
+  max-width: 47.500em;
 }
 
 a {
@@ -108,10 +199,84 @@ section {
 }
 
 .project-grid__wrapper {
-  display: block;
-  @media only screen and (min-width: $breakpoint) {
-    display: grid;
-    grid-gap: 2em;
-    grid-template-columns: 1fr 1fr;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2em;
+}
+.project-grid__wrapper--3-columns {
+  @media only screen and (min-width: $breakpoint-m) {
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+  @media only screen and (min-width: $breakpoint-l) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.project-grid__wrapper--6-columns {
+  @media only screen and (min-width: $breakpoint-s) {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  @media only screen and (min-width: $breakpoint-m) {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+  @media only screen and (min-width: $breakpoint-l) {
+    grid-template-columns: repeat(6, 1fr); 
+  }
+}
+.project-grid__wrapper--4-columns {
+  @media only screen and (min-width: $breakpoint-s) {
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+  @media only screen and (min-width: $breakpoint-l) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media only screen and (min-width: $breakpoint-xl) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.project-card {
+  background: var(--col-surface-2);
+  padding: 1em;
+  border-radius: 6px;
+  @media (hover: hover) {
+    transition: margin 300ms ease-out 0s;
+    margin: 0;
+    &:hover {
+      margin: -10px 0 10px 0;
+    }
+  } 
+}
+.project-card__title {
+  color: var(--col-headline-color);
+}
+.project-card__project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+
+  
+}
+
+.page__footer {
+  font-size: var(--font-size-s);
+  grid-area: footer;
+}
+.footer__navigation {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 0.5em 1em;
+  padding: 1em 0 1em 0;
+  margin: 0;
+  color: var(--col-element-4);;
+}
+.footer__navigation a {
+  color: var(--col-element-4);
+  &:after {
+    border-color: var(--col-element-4);
   }
 }

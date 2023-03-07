@@ -1,0 +1,43 @@
+{
+    "sideprojects":[
+        {
+        "name": "altona trashletics",
+        "subtitle": "fair produzierte hamburg shirts mit style",
+        "href": "https://trashletics.de/",
+        "clean": "trashletics.de",
+        "image": "trashletics"
+        },
+        {
+        "name": "Sneaker-Stores.de",
+        "subtitle": "Die große Liste der Sneaker Online Shops in Deutschland",
+        "href": "https://sneaker-stores.de/",
+        "clean": "sneaker-Stores.de",
+        "image" : "sneakerstores"
+        },
+        {
+        "name": "Japan Food Hamburg (WIP)",
+        "subtitle": "Japanische Gerichte und Restaurants in Hamburg finden",
+        "href": "https://japan-food-hamburg.de/",
+        "clean": "japan-food-hamburg.de",
+        "image" : "japanfoodhamburg"
+        }
+    ],
+    "kleinkrams":[
+        {
+        "name": "altona trashletics",
+        "subtitle": "fair produzierte hamburg shirts mit style",
+        "href": "https://trashletics.de/",
+        "clean": "trashletics.de",
+        "image": "trashletics"
+        }
+    ],
+    "websites":[
+        {
+        "name": "altona trashletics",
+        "subtitle": "fair produzierte hamburg shirts mit style",
+        "href": "https://trashletics.de/",
+        "clean": "trashletics.de",
+        "image": "trashletics"
+        }
+    ]
+}

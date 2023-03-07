@@ -1,24 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de" class="dark">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{ title }}</title>
 	<link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
+	<script src="{{ '/assets/app.js' | url }}"></script>
+	<meta name="theme-color" content="#D4145A">
 </head>
 <body>
 	<div class="page__wrapper">
-		<header class="page__header">
+		<aside class="page__sidebar">
+			<a href="{{ data.homeurl }}" class="branding__link">
 			{% include 'template-parts/bd-logo.njk' %}
-			
-
-			{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
-
-
-		</header>
-		<main class="content__wrapper">
-		{{ content | safe }}
-		</main>
+			</a>
+		</aside>
+		<div class="content__wrapper">
+			{{ content | safe }}
+		</div>
+		<footer class="page__footer">
+			<ul class="footer__navigation">
+		
+				<li class="{% if page.url == '/'  %} current-menu-item{% endif %}"><a href="{{ data.homeurl }}">Startseite</a></li>
+				<li class="{% if page.url == '/impressum/'  %} current-menu-item{% endif %}"><a href="/impressum">Impressum</a></li>
+				<li class="{% if page.url == '/datenschutz/'  %} current-menu-item{% endif %}"><a href="/datenschutz">Datenschutz</a></li>
+				<li>Quellcode verfügbar auf <a href="https://github.com/bej-soan/bjoernd-website" target="_blank">GitHub</a></li>
+			</ul>
+		</footer>
 	</div>
+	<script>(() => {
+     const theme = localStorage.getItem('theme');
+     if (theme) document.documentElement.classList.add(theme);
+   })();</script>
 </body>
 </html>

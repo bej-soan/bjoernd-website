@@ -3,34 +3,60 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{ title }}</title>
 	<link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
 	<script src="{{ '/assets/app.js' | url }}"></script>
-	<meta name="theme-color" content="#D4145A">
+	<link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
+	<link rel="icon" type="image/png" href="/assets/favicon/favicon.png">
+	<meta name="theme-color" content="#131519">
+	<meta name='robots' content="{{ robots }}">
+	<meta name="description" content="{{ metaDescription }}">
+	<title>{{ metaTitle }}</title>
 </head>
 <body>
 	<div class="page__wrapper">
 		<aside class="page__sidebar">
-			<a href="{{ data.homeurl }}" class="branding__link">
+			<a href="/" class="branding__link">
 			{% include 'template-parts/bd-logo.njk' %}
 			</a>
 		</aside>
 		<div class="content__wrapper">
+		
+		<header class="page__header">
+			{% if page.url == '/'  %}{%- else -%}
+				<div class="header__back-wrapper">
+					<a class="header__back-link" href="/">Zurück</a>
+				</div>
+			{% endif %}
+
+			<div class="header__branding textarea-limit-width">
+				<h1 id="intro" class="site__title">{{ title }}</h1>
+				<h2 class="site_subtitle">{{ subtitle }}</h2>
+			</div>
+			{% include 'template-parts/dark-mode-button.njk' %}
+		</header>
+		<main class="content-inner__wrapper">
 			{{ content | safe }}
+		</main>
 		</div>
+
 		<footer class="page__footer">
 			<ul class="footer__navigation">
 		
-				<li class="{% if page.url == '/'  %} current-menu-item{% endif %}"><a href="{{ data.homeurl }}">Startseite</a></li>
+				<li class="{% if page.url == '/'  %} current-menu-item{% endif %}"><a href="/">Startseite</a></li>
 				<li class="{% if page.url == '/impressum/'  %} current-menu-item{% endif %}"><a href="/impressum">Impressum</a></li>
 				<li class="{% if page.url == '/datenschutz/'  %} current-menu-item{% endif %}"><a href="/datenschutz">Datenschutz</a></li>
 				<li>Quellcode verfügbar auf <a href="https://github.com/bej-soan/bjoernd-website" target="_blank">GitHub</a></li>
 			</ul>
 		</footer>
+
 	</div>
 	<script>(() => {
      const theme = localStorage.getItem('theme');
      if (theme) document.documentElement.classList.add(theme);
    })();</script>
+   <script src="assets/wow.min.js"></script>
+	<script>
+	new WOW().init();
+	</script>
 </body>
 </html>

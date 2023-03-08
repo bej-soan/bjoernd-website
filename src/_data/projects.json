@@ -24,20 +24,62 @@
     ],
     "kleinkrams":[
         {
-        "name": "altona trashletics",
+        "name": "test",
         "subtitle": "fair produzierte hamburg shirts mit style",
-        "href": "https://trashletics.de/",
-        "clean": "trashletics.de",
+        "href": "/kleinkrams/test",
+        "internalLink": "internal",
+        "clean": "Details",
         "image": "trashletics"
         }
     ],
     "websites":[
         {
-        "name": "altona trashletics",
-        "subtitle": "fair produzierte hamburg shirts mit style",
-        "href": "https://trashletics.de/",
-        "clean": "trashletics.de",
-        "image": "trashletics"
+        "name": "HaiQ",      
+        "href": "https://haiq.de/",
+        "clean": "haiq.de",
+        "image": "haiq"
+        },
+        {
+        "name": "Drive By Heroes",      
+        "href": "https://drivebyheroes.de/",
+        "clean": "drivebyheroes.de",
+        "image": "driveby"
+        },
+        {
+        "name": "JJ Trading Solutions",      
+        "href": "https://jj-tradingsolutions.com/",
+        "clean": "jj-tradingsolutions.com",
+        "image": "jj-trading"
+        },
+        {
+        "name": "Leben leben",      
+        "href": "https://lebenleben.de/",
+        "clean": "lebenleben.de",
+        "image": "lebenleben"
+        },
+        {
+        "name": "Weitblick",      
+        "href": "https://derweitblick.com/",
+        "clean": "derweitblick.com",
+        "image": "weitblick"
+        },
+        {
+        "name": "Managementors",      
+        "href": "https://managementors.de/",
+        "clean": "managementors.de",
+        "image": "managementors"
+        },
+        {
+        "name": "Zwang B",      
+        "href": "https://zwang-b.de/",
+        "clean": "zwang-b",
+        "image": "zwangb"
+        },
+        {
+        "name": "Kudamono",      
+        "href": "https://kudamono-company.com/",
+        "clean": "kudamono-company.com",
+        "image": "kudamono"
         }
     ]
 }

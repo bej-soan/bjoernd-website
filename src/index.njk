@@ -1,136 +1,88 @@
 ---
 layout: base.njk
-title: Björn Dammann macht Zeug im Internet.
+title: Björn Dammann
+subtitle : Art Director / UI/UX Designer / Frontend Developer
+intro : 
+metaTitle : Björn Dammann macht Zeug im Internet.
+metaDescription :
+
+robots : noindex/nofollow
 eleventyNavigation:
   key: Home
 ---
 
-<header class="page__header">
-  <div class="header__branding textarea-limit-width">
 
-    <h1 id="intro" class="site__title">Björn Dammann</h1>
-    <h2 class="site_subtitle">Art Director / UI/UX Designer / Frontend Developer</h2>
+
+
+<section class="section__intro">
+  <div class="textarea-limit-width">
     <p>Ich bin Björn Dammann und mache Webkram für die <a href="https://roggeundpott.de/" target="_blank">ROGGE & POTT Design Group.</a></p>
+
+    <p>Sonst mache ich noch Hamburg-Klamotten unter altona trashletics, sammel Sneaker Läden auf Sneaker-Stores.de, Kontakte auf Xing und rechtliche Angaben im Impressum und der Datenschutzerklärung.</p>
+
+    <p>Schreiben kannst du mir hier.</p>
   </div>
-  {% include 'template-parts/dark-mode-button.njk' %}
-  
-</header>
+</section>
 
-<main class="content-inner__wrapper">
-  <section class="section__intro">
-    <div class="textarea-limit-width">
-      <p>Sonst mache ich noch Hamburg-Klamotten unter altona trashletics, sammel Sneaker Läden auf Sneaker-Stores.de, Kontakte auf Xing und rechtliche Angaben im Impressum und der Datenschutzerklärung.</p>
+<section class="section__sideprojects">
+  <h1 id="sideprojects">Sideprojects</h1>
+  <p>Ich arbeite gerne an kleinen Nebenprojekten. Hier sind einige Dinge, die ich gemacht habe.</p>
 
-      <p>Schreiben kannst du mir hier.</p>
-    </div>
-  </section>
+  <ul class="project-grid__wrapper project-grid__wrapper--3-columns ">
 
-  <section class="section__sideprojects">
-    <h1 id="sideprojects">Sideprojects</h1>
-    <p>I like working on the occasional side project. Here are some things I’ve made:</p>
+    {% for cardContent in projects.sideprojects %}
 
-    <ul class="project-grid__wrapper project-grid__wrapper--3-columns ">
-
-      {% for sideproject in projects.sideprojects %}
-
-        <li class="project-card">
-
-          <div class="project-card__project-image-wrapper">
-            
-            <img class="project-card__project-image"
-              srcset="/images/{{ sideproject.image }}@0,25x.jpg 576w,
-                    /images/{{ sideproject.image }}@0,5x.jpg 960w,
-                    /images/{{ sideproject.image }}@0,75x.jpg 1440w,
-                    /images/{{ sideproject.image }}.jpg 1920w"
-              src="/images/{{ sideproject.image }}.jpg"
-              alt="{{ sideproject.name }}" loading="lazy">
-          </div>
-
-          <h3 class="project-card__title">{{ sideproject.name }}</h3>
-          <p class="project-card__subtitle">{{ sideproject.subtitle }}</p>
-
-          <a class="project-card__link" href="{{ sideproject.href }}">{{ sideproject.clean }}</a>
-
-        </li>
-        
-      {% endfor %}
+      {% include 'template-parts/grid-card.njk' %}
+      
+    {% endfor %}
 
 
-    </ul>
+  </ul>
 
-  </section>
-
-
-  <section class="section__websites">
-    <h1 id="websites">Websites von mir</h1>
-    <p>Für Rogge & Pott Design habe ich schon viele hübsche Websites gemacht. Das sind meine Favoriten.</p>
-
-    <ul class="project-grid__wrapper project-grid__wrapper--6-columns ">
-
-      {% for website in projects.websites %}
-
-        <li class="project-card">
-
-          <div class="project-card__project-image-wrapper">
-            
-            <img class="project-card__project-image"
-              srcset="/images/{{ website.image }}@0,25x.jpg 576w,
-                    /images/{{ website.image }}@0,5x.jpg 960w,
-                    /images/{{ website.image }}@0,75x.jpg 1440w,
-                    /images/{{ website.image }}.jpg 1920w"
-              src="/images/{{ website.image }}.jpg"
-              alt="{{ website.name }}" loading="lazy">
-          </div>
-
-          <h3 class="project-card__title">{{ website.name }}</h3>
-          <p class="project-card__subtitle">{{ website.subtitle }}</p>
-
-          <a class="project-card__link" href="{{ website.href }}">{{ website.clean }}</a>
-
-        </li>
-        
-      {% endfor %}
+</section>
 
 
-    </ul>
+<section class="section__websites">
+  <h1 id="websites">Websites von mir</h1>
+  <p>Für Rogge & Pott Design habe ich schon viele hübsche Websites gemacht. Das sind meine Favoriten.</p>
+
+  <ul class="project-grid__wrapper project-grid__wrapper--4-columns ">
+
+    {% for cardContent in projects.websites %}
+
+      {% include 'template-parts/grid-card.njk' %}
+      
+    {% endfor %}
+
+  </ul>
+
+</section>
 
 
-  </section>
+<section class="section__kleinkrams">
+  <h1 id="kleinkrams">Kleinkrams</h1>
+  <p>Manchmal mache ich auch andere Sachen als Websites für mich oder Kunden. </p>
+
+  <ul class="project-grid__wrapper project-grid__wrapper--4-columns ">
+
+    {% for cardContent in projects.kleinkrams %}
+
+      {% include 'template-parts/grid-card.njk' %}
+      
+    {% endfor %}
+
+  </ul>
+
+</section>
 
 
-  <section class="section__kleinkrams">
-    <h1 id="kleineprojekte">Kleine Projekte</h1>
-    <p>Manchmal mache ich auch andere Sachen als Websites für mich oder Kunden. </p>
+<section class="section__kontakt">
+  <h1 id="kontakt">Kontakt</h1>
+  <p>Du kannst mir gerne eine <script type="text/javascript"><!--
+for(var ntkqaa=["bA","Lg","YQ","cg","Yw","RQ","PA","Zg","Ig","YQ","aw","ZQ","YQ","bg","bw","ag","cw","Ig","bg","PQ","aQ","Ig","aQ","QA","aQ","aQ","IA","TQ","aA","bw","dA","YQ","LQ","LQ","bQ","cg","YQ","aA","Pg","bw","bA","ZQ","bA","bg","aQ","Pg","bQ","YQ","Xw","dA","Og","IA","Yw","cw","YQ","ZQ","LQ","bA","PA","Ig","bA","dA","Yw","ZA","ZA","Xw","Yg","Lw","PQ"],vovojm=[33,27,10,23,32,59,65,6,38,67,56,5,34,55,14,20,35,30,41,37,50,57,17,18,63,54,2,61,3,21,45,49,60,25,9,4,1,16,68,40,53,29,64,24,11,58,48,62,47,42,15,31,44,36,43,22,52,12,0,8,51,13,39,26,28,46,19,66,7],cojjis=new Array,i=0;i<vovojm.length;i++)cojjis[vovojm[i]]=ntkqaa[i];for(var i=0;i<cojjis.length;i++)document.write(atob(cojjis[i]+"=="));
+// --></script><noscript>(Sorry, ohne Javascript keine Mail-Adresse)</noscript> schreiben.</p>
 
-    <ul class="project-grid__wrapper project-grid__wrapper--4-columns ">
-
-      {% for kleinkram in projects.kleinkrams %}
-
-        <li class="project-card">
-
-          <div class="project-card__project-image-wrapper">
-            
-            <img class="project-card__project-image"
-              srcset="/images/{{ kleinkram.image }}@0,5x.jpg 960w,
-                    /images/{{ kleinkram.image }}@0,75x.jpg 1440w,
-                    /images/{{ kleinkram.image }}.jpg 1920w"
-              src="/images/{{ kleinkram.image }}.jpg"
-              alt="{{ kleinkram.name }}" loading="lazy">
-          </div>
-
-          <h3 class="project-card__title">{{ kleinkram.name }}</h3>
-          <p class="project-card__subtitle">{{ kleinkram.subtitle }}</p>
-
-          <a class="project-card__link" href="{{ kleinkram.href }}">{{ kleinkram.clean }}</a>
-
-        </li>
-        
-      {% endfor %}
+</section>
 
 
-    </ul>
 
-
-  </section>
-
-</main>

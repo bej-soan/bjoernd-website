@@ -1,8 +1,15 @@
-# bjoern-d.de
+## bjoernd-website
 
 ### To Do
 
-* add Animate on Scrol
+* add animate on scroll
+* add projects
+* sass aufräumen
+* css for internal and external link
+* arrow for back link
+* light mode surface farbton
+* footer farbton in light mode prüfen
+* stick link on card at bottom
 
 ## Development Scripts
 

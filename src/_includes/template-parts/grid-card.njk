@@ -1,5 +1,5 @@
 <li class="project-card">
-    <a class="project-card__image-link" title="{{ cardContent.name }} öffnen" href="{{ cardContent.href }}">
+    <a class="project-card__image-link" title="{{ cardContent.name | safe }} öffnen" href="{{ cardContent.href }}" target="_{% if cardContent.internalLink %}self{% else %}blank{% endif %}">
     <div class="project-card__project-image-wrapper">
         
         <img class="project-card__project-image"
@@ -8,16 +8,16 @@
                 /images/{{ cardContent.image }}@0,75x.jpg 1440w,
                 /images/{{ cardContent.image }}.jpg 1920w"
         src="/images/{{ cardContent.image }}.jpg"
-        alt="{{ cardContent.name }}" loading="lazy">
+        alt="{{ cardContent.name | safe }}" loading="lazy">
     </div>
     </a>
 
-    <h3 class="project-card__title">{{ cardContent.name }}</h3>
+    <h3 class="project-card__title">{{ cardContent.name | safe }}</h3>
 
     {% if cardContent.subtitle %}
-        <p class="project-card__subtitle">{{ cardContent.subtitle }}</p>
+        <p class="project-card__subtitle">{{ cardContent.subtitle | safe }}</p>
     {% endif %}
 
-    <a class="project-card__link {% if cardContent.internalLink %}project-card__link--internal{% else %}project-card__link--external{% endif %}" href="{{ cardContent.href }}" title="{{ cardContent.name }} öffnen">{{ cardContent.clean }}</a>
+    <a class="project-card__link {% if cardContent.internalLink %}project-card__link--internal{% else %}project-card__link--external{% endif %}" target="_{% if cardContent.internalLink %}self{% else %}blank{% endif %}" href="{{ cardContent.href }}" title="{{ cardContent.name | safe }} öffnen">{{ cardContent.clean | safe }}</a>
 
 </li>

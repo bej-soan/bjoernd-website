@@ -10,6 +10,9 @@
 * light mode surface farbton
 * footer farbton in light mode prüfen
 * stick link on card at bottom
+* project card padding
+* project card large thumbnails
+* 404 Error
 
 ## Development Scripts
 

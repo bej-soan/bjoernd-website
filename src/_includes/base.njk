@@ -29,8 +29,8 @@
 			{% endif %}
 
 			<div class="header__branding textarea-limit-width">
-				<h1 id="intro" class="site__title">{{ title }}</h1>
-				<h2 class="site_subtitle">{{ subtitle }}</h2>
+				<h1 id="intro" class="site__title">{{ title | safe }}</h1>
+				<h2 class="site_subtitle">{{ subtitle | safe }}</h2>
 			</div>
 			{% include 'template-parts/dark-mode-button.njk' %}
 		</header>

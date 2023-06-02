@@ -2,17 +2,19 @@
 
 ### To Do
 
+* dark mode button beim ersten load falsch
 * add animate on scroll
 * add projects
 * sass aufräumen
 * css for internal and external link
 * arrow for back link
-* light mode surface farbton
 * footer farbton in light mode prüfen
-* stick link on card at bottom
-* project card padding
+* position link on card at bottom
+* project card padding wie im entwurf
 * project card large thumbnails
 * 404 Error
+* card farbe im hellen modus taugt mir nicht / light mode surface farbton
+* schatten im hellen modus raus
 
 ## Development Scripts
 

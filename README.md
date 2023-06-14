@@ -32,7 +32,7 @@ Based on [11ty Sass Skeleton](https://github.com/5t3ph/11ty-sass-skeleton) by [@
 
 ```
 <script src="assets/aos.js"></script>
-	<script>
-		AOS.init();
-	</script>
+<script>
+	AOS.init();
+</script>
 ```

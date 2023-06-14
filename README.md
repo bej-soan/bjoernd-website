@@ -2,19 +2,17 @@
 
 ### To Do
 
-* dark mode button beim ersten load falsch
-* add animate on scroll
-* add projects
-* sass aufräumen
-* css for internal and external link
-* arrow for back link
+* texte
 * footer farbton in light mode prüfen
-* position link on card at bottom
-* project card padding wie im entwurf
-* project card large thumbnails
-* 404 Error
 * card farbe im hellen modus taugt mir nicht / light mode surface farbton
-* schatten im hellen modus raus
+* add kleine projekte
+* sass aufräumen
+* position link on card at bottom
+* arrow for back link
+
+### Potential Bugs
+
+* dark mode button beim ersten load falsch. aktuell nicht mehr gesehen den bug.
 
 ## Development Scripts
 
@@ -29,3 +27,12 @@
 ## Credits
 
 Based on [11ty Sass Skeleton](https://github.com/5t3ph/11ty-sass-skeleton) by [@5t3ph](https://front-end.social/@5t3ph)
+
+### Ablage
+
+```
+<script src="assets/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+```

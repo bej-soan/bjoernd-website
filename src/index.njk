@@ -1,12 +1,12 @@
 ---
 layout: base.njk
 title: Björn Dammann
-subtitle : Art Director / UI/UX Designer / Frontend&nbsp;Developer
+subtitle : UI/UX Designer | Art Director | Frontend&nbsp;Developer
 intro : 
-metaTitle : Björn Dammann macht Zeug im Internet.
-metaDescription :
+metaTitle : Björn Dammann | UI/UX Frontend Developer | Hamburg
+metaDescription : Ich bin Björn Dammann und mache Webkram für Rogge und Pott Design. 
 
-robots : noindex/nofollow
+robots : index/follow
 eleventyNavigation:
   key: Home
 ---
@@ -16,7 +16,7 @@ eleventyNavigation:
 
 <section class="section__intro">
   <div class="textarea-limit-width">
-    <p>Ich bin Björn Dammann und mache Webkram für <a href="https://roggeundpott.de/" target="_blank">ROGGE & POTT Design</a>.</p>
+    <p>Ich bin Björn Dammann und mache Webkram für <a href="https://roggeundpott.de/" target="_blank">Rogge und Pott Design</a>.</p>
 
     <p>Sonst mache ich noch Hamburg-Klamotten unter  <a href="https://trashletics.de/" target="_blank">altona&nbsp;trashletics</a>, sammel Sneaker Läden auf <a href="https://sneaker-stores.de/" target="_blank">Sneaker&#8209;Stores.de</a> und <a href="https://www.xing.com/profile/Bjoern_Dammann2?sc_o=mxb_p">Kontakte&nbsp;auf&nbsp;Xing</a>.</p>
 
@@ -25,9 +25,9 @@ eleventyNavigation:
 
 <section class="section__sideprojects">
   <h1 id="sideprojects">Sideprojects</h1>
-  <p>Ich arbeite gerne an kleinen Nebenprojekten. Hier sind einige Dinge, die ich gemacht habe.</p>
+  <p class="textarea-limit-width">Ich arbeite gerne an kleinen Nebenprojekten. Hier sind einige Dinge, die ich gemacht habe.</p>
 
-  <ul class="project-grid__wrapper project-grid__wrapper--3-columns ">
+  <ul class="project-grid__wrapper project-grid__wrapper--sideprojects project-grid__wrapper--3-columns">
 
     {% for cardContent in projects.sideprojects %}
 
@@ -43,9 +43,9 @@ eleventyNavigation:
 
 <section class="section__websites">
   <h1 id="websites">Websites von mir</h1>
-  <p>Für <a href="https://roggeundpott.de/" target="_blank">ROGGE & POTT Design</a> habe ich schon viele hübsche Websites gemacht. Das sind meine Favoriten.</p>
+  <p class="textarea-limit-width">Für <a href="https://roggeundpott.de/" target="_blank">ROGGE & POTT Design</a> habe ich schon viele hübsche Websites gemacht. Das sind meine Favoriten.</p>
 
-  <ul class="project-grid__wrapper project-grid__wrapper--4-columns ">
+  <ul class="project-grid__wrapper project-grid__wrapper--websites  project-grid__wrapper--compact project-grid__wrapper--4-columns">
 
     {% for cardContent in projects.websites %}
 
@@ -62,8 +62,8 @@ eleventyNavigation:
   <h1 id="kleinkrams">Kleinkrams</h1>
   <p>Manchmal mache ich auch andere Sachen als Websites für mich oder Kunden. </p>
 
-  <ul class="project-grid__wrapper project-grid__wrapper--4-columns ">
-
+  <ul class="project-grid__wrapper project-grid__wrapper--kleinkrams project-grid__wrapper--compact project-grid__wrapper--4-columns ">
+    
     {% for cardContent in projects.kleinkrams %}
 
       {% include 'template-parts/grid-card.njk' %}
@@ -77,9 +77,9 @@ eleventyNavigation:
 
 <section class="section__kontakt">
   <h1 id="kontakt">Kontakt</h1>
-  <p>Du kannst mir gerne eine <script type="text/javascript"><!--
+  <p>Einfach mal Hallo sagen oder eine neue Website? Schreib mir einfach eine <script type="text/javascript"><!--
 for(var ntkqaa=["bA","Lg","YQ","cg","Yw","RQ","PA","Zg","Ig","YQ","aw","ZQ","YQ","bg","bw","ag","cw","Ig","bg","PQ","aQ","Ig","aQ","QA","aQ","aQ","IA","TQ","aA","bw","dA","YQ","LQ","LQ","bQ","cg","YQ","aA","Pg","bw","bA","ZQ","bA","bg","aQ","Pg","bQ","YQ","Xw","dA","Og","IA","Yw","cw","YQ","ZQ","LQ","bA","PA","Ig","bA","dA","Yw","ZA","ZA","Xw","Yg","Lw","PQ"],vovojm=[33,27,10,23,32,59,65,6,38,67,56,5,34,55,14,20,35,30,41,37,50,57,17,18,63,54,2,61,3,21,45,49,60,25,9,4,1,16,68,40,53,29,64,24,11,58,48,62,47,42,15,31,44,36,43,22,52,12,0,8,51,13,39,26,28,46,19,66,7],cojjis=new Array,i=0;i<vovojm.length;i++)cojjis[vovojm[i]]=ntkqaa[i];for(var i=0;i<cojjis.length;i++)document.write(atob(cojjis[i]+"=="));
-// --></script><noscript>(Sorry, ohne Javascript keine Mail-Adresse)</noscript> schreiben.</p>
+// --></script><noscript>(Sorry, ohne Javascript keine Mail-Adresse)</noscript>.</p>
 
 </section>
 

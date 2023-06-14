@@ -12,12 +12,14 @@
     </div>
     </a>
 
-    <h3 class="project-card__title">{{ cardContent.name | safe }}</h3>
+    <div class="project-card__project-text-wrapper">
+        <h3 class="project-card__title">{{ cardContent.name | safe }}</h3>
 
-    {% if cardContent.subtitle %}
-        <p class="project-card__subtitle">{{ cardContent.subtitle | safe }}</p>
-    {% endif %}
+        {% if cardContent.subtitle %}
+            <p class="project-card__subtitle">{{ cardContent.subtitle | safe }}</p>
+        {% endif %}
 
-    <a class="project-card__link {% if cardContent.internalLink %}project-card__link--internal{% else %}project-card__link--external{% endif %}" target="_{% if cardContent.internalLink %}self{% else %}blank{% endif %}" href="{{ cardContent.href }}" title="{{ cardContent.name | safe }} öffnen">{{ cardContent.clean | safe }}</a>
+        <a class="project-card__link {% if cardContent.internalLink %}project-card__link--internal{% else %}project-card__link--external{% endif %}" target="_{% if cardContent.internalLink %}self{% else %}blank{% endif %}" href="{{ cardContent.href }}" title="{{ cardContent.name | safe }} öffnen">{{ cardContent.clean | safe }}</a>
+    </div>
 
 </li>

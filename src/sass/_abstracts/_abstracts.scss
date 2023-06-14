@@ -14,8 +14,8 @@
   --col-darkestgrey : #1C1E22;
   --col-darkgrey: #565B65;
   --col-midgrey: #9EA0AA;
-  --col-lightgrey: #D6D7E6;
-  --col-lightestgrey: #ecedef; 
+  --col-lightgrey: #c9cadb;
+  --col-lightestgrey: #efeff0; 
   --col-white: #F8F8F8;
 
   --font-size-s: clamp(0.83rem, 0.09vw + 0.81rem, 0.9rem);
@@ -47,10 +47,10 @@ html.light {
   --col-element-1 : var(--col-black);
   --col-element-2 : var(--col-darkgrey);
   --col-element-3 : var(--col-midgrey);
-  --col-element-4 : var(--col-lightgrey);
+  --col-element-4 : var(--col-midgrey);
 
-  --col-surface-1 : var(--col-white);
-  --col-surface-2 : var(--col-lightestgrey);
+  --col-surface-1 : var(--col-lightestgrey);
+  --col-surface-2 : var(--col-white);
   --col-primary-1 : var(--col-primary-1-lightmode);
 
   --col-headline-color : var(--col-element-1);

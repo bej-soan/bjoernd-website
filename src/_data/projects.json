@@ -34,6 +34,12 @@
     ],
     "websites":[
         {
+        "name": "Jutta Flick",      
+        "href": "https://www.juttaflick.de/",
+        "clean": "juttaflick.de",
+        "image": "juttaflick"
+        },
+        {
         "name": "HaiQ",      
         "href": "https://haiq.de/",
         "clean": "haiq.de",
@@ -74,12 +80,6 @@
         "href": "https://zwang-b.de/",
         "clean": "zwang-b.de",
         "image": "zwangb"
-        },
-        {
-        "name": "Kudamono",      
-        "href": "https://kudamono-company.com/",
-        "clean": "kudamono-company.com",
-        "image": "kudamono"
         }
     ]
 }

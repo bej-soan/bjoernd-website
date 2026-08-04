@@ -1,14 +1,12 @@
 // 1. Moderne ESM-Importe statt 'require'
 import eleventySass from "@11tyrocks/eleventy-plugin-sass-lightningcss";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
-import UpgradeHelper from "@11ty/eleventy-upgrade-help";
 
 // 2. 'export default' statt 'module.exports'
 export default function (eleventyConfig) {
   // Plugins aktivieren
   
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addPlugin(UpgradeHelper);
   
   // Passthrough Copies (unverändert)
   eleventyConfig.addPassthroughCopy("./src/images/");

@@ -1,0 +1,25 @@
+@use '../_abstracts/abstracts';
+
+
+
+
+
+.page__footer {
+  font-size: var(--font-size-s);
+  grid-area: footer;
+}
+.footer__navigation {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 0.5em 1em;
+  padding: 1em 0 1em 0;
+  margin: 0;
+  color: var(--col-element-4);;
+}
+.footer__navigation a {
+  color: var(--col-element-4);
+  &:after {
+    border-color: var(--col-element-4);
+  }
+}

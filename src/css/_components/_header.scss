@@ -1,0 +1,58 @@
+@use '../_abstracts/abstracts';
+
+
+
+
+
+.branding__logo {
+  max-width: 50px;
+  @media only screen and (min-width: abstracts.$breakpoint-m) {
+    max-width: 60px;
+  }
+  height: auto;
+  svg {
+    width: 100%;
+    height: auto;
+  }
+  opacity: 1;
+}
+.branding__link {
+  text-decoration: none;
+  display: inline-block;
+  &:after {
+    border-bottom: none !important;
+  }
+  @media (hover: hover) {
+    transition: margin-top 300ms ease-out 0s;
+    margin-top: 0px;
+    &:hover {
+      margin-top: -10px;
+    }
+  }
+  @media (prefers-reduced-motion) {
+    transition: none !important;
+    
+    &:hover {
+      margin-top: 0px  !important;
+      opacity: 0.6;
+    }
+  }
+}
+
+
+
+.header__back-wrapper {
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+.site__title {
+  font-size: var(--font-size-xl);
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+.site_subtitle {
+  margin-top: 0em;
+  margin-bottom: 2em;
+  font-weight: var(--font-weight-default);
+}

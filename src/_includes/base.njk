@@ -19,9 +19,20 @@
 			{% include 'template-parts/bd-logo.njk' %}
 			</a>
 		</aside>
+
+		<div class="nav__wrapper">
+				{% include 'template-parts/nav-header.njk' %}
+				{% include 'template-parts/dark-mode-button.njk' %}
+		</div>
+
 		<div class="content__wrapper">
 		
 		<header class="page__header">
+			
+			
+				
+
+
 			{% if page.url == '/'  %}{%- else -%}
 				<div class="header__back-wrapper">
 					<a class="header__back-link" href="/">Zurück</a>
@@ -32,7 +43,7 @@
 				<h1 id="intro" class="site__title">{{ title | safe }}</h1>
 				<h2 class="site_subtitle">{{ subtitle | safe }}</h2>
 			</div>
-			{% include 'template-parts/dark-mode-button.njk' %}
+			
 		</header>
 		<main class="content-inner__wrapper">
 			{{ content | safe }}
@@ -40,13 +51,25 @@
 		</div>
 
 		<footer class="page__footer">
-			<ul class="footer__navigation">
-		
-				<li class="{% if page.url == '/'  %} current-menu-item{% endif %}"><a href="/">Startseite</a></li>
-				<li class="{% if page.url == '/impressum/'  %} current-menu-item{% endif %}"><a href="/impressum">Impressum</a></li>
-				<li class="{% if page.url == '/datenschutz/'  %} current-menu-item{% endif %}"><a href="/datenschutz">Datenschutz</a></li>
+
+
+			<nav class="menu site__footer-menu" role="navigation">
+
+			{% set navPages = collections.all | eleventyNavigation('legal') %}
+				<ul id="footer-menu" class="footer__navigation footer-menu__pages footer-menu--desktop">
+				{%- for entry in navPages %}
+					<li{% if entry.url == page.url %} class="active"{% endif %}>
+					<a href="{{ entry.url }}">{{ entry.title }}</a>
+					</li>
+				{%- endfor %}
 				<li>Quellcode verfügbar auf <a href="https://github.com/bej-soan/bjoernd-website" target="_blank">GitHub</a></li>
-			</ul>
+				</ul>
+
+				
+			</nav>
+
+    
+
 		</footer>
 
 	</div>

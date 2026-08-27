@@ -21,19 +21,31 @@
 </div>
 			</a>
 		</aside>
-		<div class="content__wrapper">
-		
-		<header class="page__header">
-			<div class="header__back-wrapper">
-					<a class="header__back-link" href="/">Zurück</a>
-				</div>
-			
 
-			<div class="header__branding textarea-limit-width">
-				<h1 id="intro" class="site__title">Datenschutz&shy;erklärung</h1>
-				<h2 class="site_subtitle"></h2>
-			</div>
-			<div class="header__dark-mode-wrapper">
+		<div class="nav__wrapper">
+				<nav class="menu site__main-menu" role="navigation">
+
+    <button id="menu-btn" class="menu-toggle main-menu__mobile-btn" aria-expanded="false" aria-label="Toggle navigation">
+        ☰
+    </button>
+
+
+
+    <ul id="nav-menu" class="main-menu__pages main-menu--desktop">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/index copy/">Andere Seite</a>
+        </li>
+    </ul>
+
+    
+</nav>
+
+    
+
+				<div class="header__dark-mode-wrapper">
     <div class="buttonContainer">
         <button class="button dark-mode__button dark-mode__button--light theme-light"><span class="tooltiptext">Helle Seite</span><div class="dark-mode__icon-wrapper">
 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
@@ -61,6 +73,26 @@
 </div></button>
       </div>
   </div>
+		</div>
+
+		<div class="content__wrapper">
+		
+		<header class="page__header">
+			
+			
+				
+
+
+			<div class="header__back-wrapper">
+					<a class="header__back-link" href="/">Zurück</a>
+				</div>
+			
+
+			<div class="header__branding textarea-limit-width">
+				<h1 id="intro" class="site__title">Datenschutz&shy;erklärung</h1>
+				<h2 class="site_subtitle"></h2>
+			</div>
+			
 		</header>
 		<main class="content-inner__wrapper">
 			
@@ -108,13 +140,26 @@ for(var jmjyjo=["YQ","Og","cg","bg","PA","PA","PQ","Lg","cg","Lg","bg","bA","bA"
 		</div>
 
 		<footer class="page__footer">
-			<ul class="footer__navigation">
-		
-				<li class=""><a href="/">Startseite</a></li>
-				<li class=""><a href="/impressum">Impressum</a></li>
-				<li class=" current-menu-item"><a href="/datenschutz">Datenschutz</a></li>
+
+
+			<nav class="menu site__footer-menu" role="navigation">
+
+			
+				<ul id="footer-menu" class="footer__navigation footer-menu__pages footer-menu--desktop">
+					<li class="active">
+					<a href="/datenschutz/">Datenschutz</a>
+					</li>
+					<li>
+					<a href="/impressum/">Impressum</a>
+					</li>
 				<li>Quellcode verfügbar auf <a href="https://github.com/bej-soan/bjoernd-website" target="_blank">GitHub</a></li>
-			</ul>
+				</ul>
+
+				
+			</nav>
+
+    
+
 		</footer>
 
 	</div>

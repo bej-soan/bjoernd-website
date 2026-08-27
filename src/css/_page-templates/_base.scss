@@ -1,0 +1,43 @@
+@use '../_abstracts/abstracts';
+
+.page__wrapper {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  grid-template-areas: "sidebar nav"
+  "content content"
+  "footer footer";
+  grid-column-gap: 5%;
+  grid-row-gap: 0;
+  margin: 0 auto;
+  padding: 4% 5%;
+  @media only screen and (min-width: abstracts.$breakpoint-m) {
+    grid-row-gap: 4em;
+    grid-template-columns: 10% auto;
+    grid-template-areas: 
+    "sidebar nav"
+    "sidebar content"
+    "nix footer";
+  }
+}
+.page__sidebar {
+  grid-area: sidebar;
+  @media only screen and (min-width: abstracts.$breakpoint-m) {
+    position: fixed;
+  }
+ 
+}
+
+section {
+  margin-bottom: 3em;
+}
+.content__wrapper {
+  grid-area: content;
+  margin-top: 1em;
+  padding-top: 2em;
+  border-top: 1px solid var(--col-border);
+  @media only screen and (min-width: abstracts.$breakpoint-m) {
+    margin-top: 0;
+    border-top: none;
+    padding: 0;
+  }
+}

@@ -1,0 +1,127 @@
+@use '../_abstracts/abstracts';
+
+.page-wrapper {
+    position: relative;
+}
+.nav__wrapper {
+    
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+    flex-direction: row-reverse;
+    margin-bottom: 0.5em;
+    align-items: flex-end;
+    @media only screen and (min-width: abstracts.$breakpoint-m) {
+        padding: var(--space-s) 0;
+        border-bottom: 1px solid var(--col-border);
+        flex-direction: row;
+        align-items: stretch;
+        margin-bottom: 0;
+  }
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: var(--global-gap);
+  font-size: var(--font-size-base);
+}
+.site__main-menu a {
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+}
+.site__main-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.site__main-menu.menu ul {
+  padding: 0.4em 0;
+  gap: clamp(1rem, 0.273rem + 3.64vw, 3rem);
+}
+.site__main-menu a {
+  color: var(--col-element-2);
+  transition: color var(--transition-time) ease 0s;
+  &:after {
+    border: none;
+  }
+}
+.site__main-menu a:hover {
+  color: var(--col-primary-1);
+}
+.main-menu__mobile-btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: var(--col-element-2);
+  font-size: var(--font-size-l);
+  line-height: 1;
+  margin-top: -0.2em;
+  margin-right: -0.5em;
+  padding: 0.3em;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  transition: none;
+  z-index: 1000;
+}
+.menu ul.main-menu__pages {
+  display: none;
+}
+.main-menu__icon  {
+  display: inherit;
+}
+.main-menu__icon a {
+  display: inline-flex;
+  gap: 0.2em;
+  align-items: center;
+  .icon {
+    margin-top: 2px;
+  }
+}
+@media only screen and (max-width: abstracts.$breakpoint-l) {
+  .main-menu__icon a span {
+    display: none;
+  }
+}
+.site__main-menu a:hover .icon {
+  fill: var(--col-element-2);
+}
+
+.menu ul.main-menu__pages.active {
+  display: block;
+  position: absolute;
+  top: 8%;
+  right: 0;
+  width: 100%;
+  padding: 0;
+  background-color: var(--col-surface-2);
+  //box-shadow: 0px 3px 0px 0px  rgba(0,0,0,0.3);
+  z-index: 500;
+  a {
+    display: block;
+    text-align: right;
+    padding: 0.5em 4%;
+    font-size: var(--font-size-base);
+    color: var(--col-element-1);
+    border-bottom: 1px solid var(--col-border);
+  }
+}
+
+
+@media only screen and (min-width: abstracts.$breakpoint-m) {
+  .site__main-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu ul.main-menu--desktop {
+    display: flex;
+  }
+  .main-menu__mobile-btn {
+    display: none;
+  }
+}

@@ -9,7 +9,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventySass, {
     // Hier fügen wir die geforderten Compile-Optionen für SCSS hinzu
     compileOptions: {
-      permalink: "raw"
     }
   });
   eleventyConfig.addPlugin(eleventyNavigationPlugin);

@@ -2,17 +2,9 @@
 
 ### To Do
 
-* texte
-* footer farbton in light mode prüfen
-* card farbe im hellen modus taugt mir nicht / light mode surface farbton
-* add kleine projekte
-* sass aufräumen
-* position link on card at bottom
-* arrow for back link
+- mobile menu nicht schick
 
-### Potential Bugs
-
-* dark mode button beim ersten load falsch. aktuell nicht mehr gesehen den bug.
+### Bugs
 
 ## Development Scripts
 

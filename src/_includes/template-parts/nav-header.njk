@@ -1,0 +1,20 @@
+<nav class="menu site__main-menu" role="navigation">
+
+    <button id="menu-btn" class="menu-toggle main-menu__mobile-btn" aria-expanded="false" aria-label="Toggle navigation">
+        ☰
+    </button>
+
+
+{% set navPages = collections.all | eleventyNavigation('main') %}
+    <ul id="nav-menu" class="main-menu__pages main-menu--desktop">
+    {%- for entry in navPages %}
+        <li{% if entry.url == page.url %} class="active"{% endif %}>
+          <a href="{{ entry.url }}">{{ entry.title }}</a>
+        </li>
+    {%- endfor %}
+    </ul>
+
+    
+</nav>
+
+    

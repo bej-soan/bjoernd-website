@@ -1,0 +1,22 @@
+
+
+a {
+  color: var(--col-element-1);
+  text-decoration: none;
+  position: relative;
+  transition: color 300ms ease 0s;
+  &:after {
+    content: '';
+    border-bottom: 1px solid var(--col-primary-1);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  &:hover {
+    color: var(--col-primary-1);
+  }
+  @media (prefers-reduced-motion) {
+    transition: none !important;
+  }
+}

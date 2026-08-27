@@ -1,4 +1,4 @@
-@import '_abstracts/abstracts';
+@use '_abstracts/abstracts';
 //@import '_vendor/aos';
 
 ::selection {
@@ -104,7 +104,7 @@ h4 {
   grid-row-gap: 4em;
   margin: 0 auto;
   padding: 5%;
-  @media only screen and (min-width: $breakpoint-m) {
+  @media only screen and (min-width: abstracts.$breakpoint-m) {
     grid-template-columns: 10% auto;
     grid-template-areas: "sidebar content"
     "nix footer";
@@ -113,7 +113,7 @@ h4 {
 
 .page__sidebar {
   grid-area: sidebar;
-  @media only screen and (min-width: $breakpoint-m) {
+  @media only screen and (min-width: abstracts.$breakpoint-m) {
     position: fixed;
   }
  
@@ -128,7 +128,7 @@ h4 {
   position: absolute;
   right: 5%;
   top: 5%;
-  @media only screen and (min-width: $breakpoint-m) {
+  @media only screen and (min-width: abstracts.$breakpoint-m) {
     position: relative;
     right: unset;
     top: unset;
@@ -223,34 +223,34 @@ section {
   grid-gap: 2em;
 }
 .project-grid__wrapper--3-columns {
-  @media only screen and (min-width: $breakpoint-m) {
+  @media only screen and (min-width: abstracts.$breakpoint-m) {
     grid-template-columns: repeat(2, 1fr);
 
   }
-  @media only screen and (min-width: $breakpoint-l) {
+  @media only screen and (min-width: abstracts.$breakpoint-l) {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 .project-grid__wrapper--6-columns {
-  @media only screen and (min-width: $breakpoint-s) {
+  @media only screen and (min-width: abstracts.$breakpoint-s) {
     grid-template-columns: repeat(2, 1fr); 
   }
-  @media only screen and (min-width: $breakpoint-m) {
+  @media only screen and (min-width: abstracts.$breakpoint-m) {
     grid-template-columns: repeat(3, 1fr); 
   }
-  @media only screen and (min-width: $breakpoint-l) {
+  @media only screen and (min-width: abstracts.$breakpoint-l) {
     grid-template-columns: repeat(6, 1fr); 
   }
 }
 .project-grid__wrapper--4-columns {
-  @media only screen and (min-width: $breakpoint-s) {
+  @media only screen and (min-width: abstracts.$breakpoint-s) {
     grid-template-columns: repeat(2, 1fr);
 
   }
-  @media only screen and (min-width: $breakpoint-l) {
+  @media only screen and (min-width: abstracts.$breakpoint-l) {
     grid-template-columns: repeat(3, 1fr);
   }
-  @media only screen and (min-width: $breakpoint-xl) {
+  @media only screen and (min-width: abstracts.$breakpoint-xl) {
     grid-template-columns: repeat(4, 1fr);
   }
 }

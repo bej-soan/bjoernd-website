@@ -3,14 +3,10 @@
   "version": "0.1.0",
   "description": "Repository for my personal website",
   "main": "index.html",
+  "type": "module",
   "scripts": {
-    "build": "eleventy",
-    "dev": "ELEVENTY_ENV=dev npx @11ty/eleventy --serve",
-    "sass": "sass src/css:_public/css",
-    "watch:sass": "npm run sass -- --watch",
-    "watch:eleventy": "eleventy --serve",
-    "start-watch": "npm-run-all sass --parallel watch:*",
-    "start": "eleventy --serve"
+    "start": "eleventy --serve",
+    "build": "eleventy"
   },
   "repository": {
     "type": "git",
@@ -20,8 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^3.1.6",
-    "@11tyrocks/eleventy-plugin-sass-lightningcss": "^1.0.0",
-    "npm-run-all": "^4.1.5"
+    "@11tyrocks/eleventy-plugin-sass-lightningcss": "1.2"
   },
   "browserslist": [
     "> 0.2%",

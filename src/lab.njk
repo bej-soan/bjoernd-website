@@ -1,0 +1,23 @@
+---
+layout: page-templates/base.njk
+title: Lab
+subtitle: ""
+intro:
+metaTitle: Lab | Björn Dammann
+metaDescription: Sideprojects und Spaßprojekte von Björn Dammann.
+robots: index/follow
+eleventyNavigation:
+  key: Lab
+  parent: main
+  order: 20
+---
+
+<section class="section__cases">
+  <p class="textarea-limit-width">{{ caseCategories.lab.subtitle | safe }}</p>
+
+  <ul class="project-grid__wrapper project-grid__wrapper--cases project-grid__wrapper--3-columns">
+    {% for cardContent in cases | casesByCategory("lab") %}
+      {% include 'template-parts/case-card.njk' %}
+    {% endfor %}
+  </ul>
+</section>

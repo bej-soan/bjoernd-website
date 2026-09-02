@@ -1,0 +1,18 @@
+<li class="project-card">
+    <a class="project-card__image-link" title="{{ cardContent.title | safe }} öffnen" href="/{{ cardContent.category }}/{{ cardContent.slug }}/">
+    <div class="project-card__project-image-wrapper">
+        <img class="project-card__project-image" src="{{ cardContent.thumbnail }}" alt="{{ cardContent.title | safe }}" loading="lazy">
+    </div>
+    </a>
+
+    <div class="project-card__project-text-wrapper">
+        <h3 class="project-card__title">{{ cardContent.title | safe }}</h3>
+
+        {% if cardContent.description %}
+            <p class="project-card__subtitle">{{ cardContent.description | safe }}</p>
+        {% endif %}
+
+        <a class="project-card__link project-card__link--internal" href="/{{ cardContent.category }}/{{ cardContent.slug }}/" title="{{ cardContent.title | safe }} ansehen">Case ansehen</a>
+    </div>
+
+</li>

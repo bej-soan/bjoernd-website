@@ -20,3 +20,21 @@ a {
     transition: none !important;
   }
 }
+
+.button {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  border-radius: 4px;
+  background: var(--col-primary-1);
+  color: var(--col--white);
+  &:after {
+    display: none;
+  }
+  @media (hover: hover) {
+    transition: opacity 300ms ease-out 0s;
+    &:hover {
+      opacity: 0.8;
+      color: var(--col--white);
+    }
+  }
+}

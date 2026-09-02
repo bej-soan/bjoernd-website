@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de" class="dark">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
+	<script src="{{ '/assets/app.js' | url }}"></script>
+	<link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
+	<link rel="icon" type="image/png" href="/assets/favicon/favicon.png">
+	<meta name="theme-color" content="#131519">
+	<meta name='robots' content="{{ robots }}">
+	<meta name="description" content="{{ metaDescription }}">
+	<title>{{ metaTitle }}</title>
+</head>
+<body>
+	<div class="page__wrapper">
+		<aside class="page__sidebar">
+			<a href="/" class="branding__link">
+			{% include 'template-parts/bd-logo.njk' %}
+			</a>
+		</aside>
+
+		<div class="nav__wrapper">
+				{% include 'template-parts/nav-header.njk' %}
+				{% include 'template-parts/dark-mode-button.njk' %}
+		</div>
+
+		<div class="content__wrapper">
+		
+		<header class="page__header">
+			
+			
+				
+
+
+			{% if page.url == '/'  %}{%- else -%}
+				<div class="header__back-wrapper">
+					<a class="header__back-link" href="/">Zurück</a>
+				</div>
+			{% endif %}
+
+			<div class="header__branding textarea-limit-width">
+				<h1 id="intro" class="site__title">{{ title | safe }}</h1>
+				<h2 class="site_subtitle">{{ subtitle | safe }}</h2>
+			</div>
+			
+		</header>
+		<main class="content-inner__wrapper">
+			{{ content | safe }}
+		</main>
+		</div>
+
+		<footer class="page__footer">
+
+
+			<nav class="menu site__footer-menu" role="navigation">
+
+			{% set navPages = collections.all | eleventyNavigation('legal') %}
+				<ul id="footer-menu" class="footer__navigation footer-menu__pages footer-menu--desktop">
+				{%- for entry in navPages %}
+					<li{% if entry.url == page.url %} class="active"{% endif %}>
+					<a href="{{ entry.url }}">{{ entry.title }}</a>
+					</li>
+				{%- endfor %}
+				<li>Quellcode verfügbar auf <a href="https://github.com/bej-soan/bjoernd-website" target="_blank">GitHub</a></li>
+				</ul>
+
+				
+			</nav>
+
+    
+
+		</footer>
+
+	</div>
+</body>
+</html>

@@ -13,6 +13,12 @@ export default function (eleventyConfig) {
   });
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
+  // Cases nach Kategorie filtern, optional auf eine Anzahl begrenzen (für Teaser)
+  eleventyConfig.addFilter("casesByCategory", (cases, category, limit) => {
+    const filtered = cases.filter((item) => item.category === category);
+    return limit ? filtered.slice(0, limit) : filtered;
+  });
+
   // Passthrough Copies (unverändert)
   eleventyConfig.addPassthroughCopy("./src/images/");
   eleventyConfig.addPassthroughCopy("./src/assets/");

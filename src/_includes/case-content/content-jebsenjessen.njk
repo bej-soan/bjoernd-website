@@ -1,0 +1,52 @@
+<h2 class="single-case__headline">{{ item.title }}</h2>
+
+<div class="single-case__content-wrapper">
+    <div class="single-case__image-wrapper">
+
+        <div class="video-container">
+            <video poster="/assets/videos/bd_video_thumb_master-2-jjtrading-scroll.jpg" class="video-container--inner" autoplay muted loop playsinline controls>
+            <source type="video/mp4" src="/assets/videos/bd_video_thumb_master-2-jjtrading-scroll.mp4">
+            </video>
+        </div>
+
+        <img loading="lazy" class="single-case__image" src="/assets/images/case-images/bd-cases_jebsenjessen-1.jpg" alt="Detailansicht für {{ project.title }}"> 
+
+        <div class="single-case__mobile-image-wrapper">
+
+            <img loading="lazy" class="single-case__image single-case__image--mobile" src="/assets/images/case-images/bd-cases_jebsenjessen-mobile-1.jpg" alt="Detailansicht für {{ project.title }}">
+
+            <img loading="lazy" class="single-case__image single-case__image--mobile" src="/assets/images/case-images/bd-cases_jebsenjessen-mobile-2.jpg" alt="Detailansicht für {{ project.title }}">
+
+        </div>
+
+        <img loading="lazy" class="single-case__image" src="/assets/images/case-images/bd-cases_jebsenjessen-2.jpg" alt="Detailansicht für {{ project.title }}"> 
+
+        
+ 
+    </div>
+    <div class="single-case__text-wrapper">
+
+        <a class="single-case__button-back single-case__button-back--top button" href="{{ backToOverview }}">Zurück zur Übersicht</a>
+
+        <a class="single-case__extlink" target="_blank" href="{{ item.url }}">{{ item.urlTitle }}</a>
+
+        <div class="single-case__description">
+           <p><strong>Design und Entwicklung einer statischen Website mit Eleventy für JJ Trading Solutions</strong></p>
+
+            <p>Agentur: rogge und pott design</p>
+
+            <p>Für JJ Trading Solutions habe ich die Website als zentrale Einstiegsplattform für verschiedene Unternehmen und Geschäftsfelder der Jebsen & Jessen Gruppe gestaltet. Ziel war es, die Zugehörigkeit zum Konzern sichtbar zu machen und gleichzeitig einen eigenständigen digitalen Auftritt zu schaffen.</p>
+
+            <p>Ich habe das Design entwickelt und dabei die visuelle Sprache des Mutterkonzerns aufgegriffen, sie aber bewusst weitergedacht. Entstanden ist eine moderne Website, die sich klar in die Markenfamilie einfügt und dennoch einen eigenen Charakter besitzt.</p>
+
+            <p>Da kein Content-Management-System gewünscht war, habe ich die Website als statisches Projekt mit dem Static Site Generator Eleventy umgesetzt. Dieser Ansatz sorgt für kurze Ladezeiten, hohe Sicherheit und einen geringen Wartungsaufwand.</p>
+
+            <p>Das Frontend wurde von mir vollständig entwickelt und für die Infrastruktur des Kunden vorbereitet. Das Deployment erfolgte anschließend durch die IT-Agentur des Kunden über Docker-Container.</p>
+        </div>
+
+    </div>
+
+    
+</div>
+
+<a class="single-case__button-back single-case__button-back--bottom button" href="{{ backToOverview }}">Zurück zur Übersicht</a>

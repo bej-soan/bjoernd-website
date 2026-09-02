@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: page-templates/base.njk
 title: Björn Dammann
 subtitle : Senior UI/UX Designer | Frontend&nbsp;Developer
 intro : 
@@ -10,6 +10,7 @@ robots : index/follow
 eleventyNavigation:
   key: Home
   parent: main
+  order: 0
 ---
 
 
@@ -24,56 +25,41 @@ eleventyNavigation:
   </div>
 </section>
 
-<section class="section__websites">
-  <h1 id="websites">Websites von mir</h1>
-  <p class="textarea-limit-width">Für <a href="https://roggeundpott.de/" target="_blank">Rogge&nbsp;und Pott&nbsp;Design</a> habe ich viele hübsche Websites gemacht. Das sind meine Favoriten.</p>
+<section class="section__work">
+  <h1 id="work">Work</h1>
+  <p class="textarea-limit-width">{{ caseCategories.work.subtitle | safe }}</p>
 
-  <ul class="project-grid__wrapper project-grid__wrapper--websites  project-grid__wrapper--compact project-grid__wrapper--4-columns">
+  <ul class="project-grid__wrapper project-grid__wrapper--cases project-grid__wrapper--3-columns">
 
-    {% for cardContent in projects.websites %}
+    {% for cardContent in cases | casesByCategory("work", 6) %}
 
-      {% include 'template-parts/grid-card.njk' %}
-      
+      {% include 'template-parts/case-card.njk' %}
+
     {% endfor %}
 
   </ul>
 
-</section>
-
-<section class="section__sideprojects">
-  <h1 id="sideprojects">Sideprojects</h1>
-  <p class="textarea-limit-width">Ich arbeite gerne an kleinen Nebenprojekten. Hier sind einige Dinge, die ich gemacht habe.</p>
-
-  <ul class="project-grid__wrapper project-grid__wrapper--sideprojects project-grid__wrapper--3-columns">
-
-    {% for cardContent in projects.sideprojects %}
-
-      {% include 'template-parts/grid-card.njk' %}
-      
-    {% endfor %}
-
-
-  </ul>
+  <p><a href="/work/">Alle Work-Cases ansehen</a></p>
 
 </section>
 
-{%- if tags == "toolsPages" %}
-<section class="section__kleinkrams">
-  <h1 id="kleinkrams">Kleinkrams</h1>
-  <p>Manchmal mache ich auch andere Sachen als Websites für mich oder Kunden. </p>
+<section class="section__lab">
+  <h1 id="lab">Lab</h1>
+  <p class="textarea-limit-width">{{ caseCategories.lab.subtitle | safe }}</p>
 
-  <ul class="project-grid__wrapper project-grid__wrapper--kleinkrams project-grid__wrapper--compact project-grid__wrapper--4-columns ">
-    
-    {% for cardContent in projects.kleinkrams %}
+  <ul class="project-grid__wrapper project-grid__wrapper--cases project-grid__wrapper--3-columns">
 
-      {% include 'template-parts/grid-card.njk' %}
-      
+    {% for cardContent in cases | casesByCategory("lab", 6) %}
+
+      {% include 'template-parts/case-card.njk' %}
+
     {% endfor %}
 
   </ul>
 
+  <p><a href="/lab/">Alle Lab-Projekte ansehen</a></p>
+
 </section>
-{%- endif -%}
 
 
 <section class="section__kontakt">

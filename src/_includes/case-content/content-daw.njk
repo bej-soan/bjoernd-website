@@ -1,0 +1,44 @@
+<h2 class="single-case__headline">{{ item.title }}</h2>
+
+<div class="single-case__content-wrapper">
+    <div class="single-case__image-wrapper">
+
+        <div class="video-container">
+            <video poster="/assets/videos/bd_video_thumb_master-8-daw.jpg" class="video-container--inner" autoplay muted loop playsinline controls>
+            <source type="video/mp4" src="/assets/videos/bd_video_thumb_master-8-daw.mp4">
+            </video>
+        </div>
+
+        <img loading="lazy" class="single-case__image" src="/assets/images/case-images/bd-cases_daw-1.jpg" alt="Detailansicht für {{ project.title }}"> 
+
+        <div class="single-case__mobile-image-wrapper">
+
+            <img loading="lazy" class="single-case__image single-case__image--mobile" src="/assets/images/case-images/bd-cases_daw-mobile-1.jpg" alt="Detailansicht für {{ project.title }}">
+
+            <img loading="lazy" class="single-case__image single-case__image--mobile" src="/assets/images/case-images/bd-cases_daw-mobile-2.jpg" alt="Detailansicht für {{ project.title }}">
+
+        </div>
+
+        <img loading="lazy" class="single-case__image" src="/assets/images/case-images/bd-cases_daw-2.jpg" alt="Detailansicht für {{ project.title }}"> 
+ 
+    </div>
+    <div class="single-case__text-wrapper">
+
+        <a class="single-case__button-back single-case__button-back--top button" href="{{ backToOverview }}">Zurück zur Übersicht</a>
+
+        <a class="single-case__extlink" target="_blank" href="{{ item.url }}">{{ item.urlTitle }}</a>
+
+        <div class="single-case__description">
+            <p><strong>Design und Code eines WordPress Custom Themes für die Deutsche Abfallwirtschaft GmbH</strong></p>
+            <p>Agentur: rogge und pott design</p>
+            <p>Für die DAW (Deutsche Abfallwirtschafts GmbH) ging es darum, die Expertise eines Netzwerks aus mittelständischen Entsorgungsunternehmen digital sichtbar zu machen und eine moderne, responsive Plattform zu schaffen.</p>
+            <p>Das initiale Design der Startseite entstand im Team. Ich habe diesen Entwurf aufgenommen, weiterentwickelt und in ein modulares Komponentensystem überführt. Darauf aufbauend habe ich das Design System entwickelt, die UI/UX der Unterseiten gestaltet und das visuelle Konzept eigenständig finalisiert.</p>
+            <p>Ich habe das gesamte Projekt als schlankes, maßgeschneidertes WordPress Custom Theme mit Advanced Custom Fields (ACF) programmiert. Die Plattform ist dadurch skalierbar und flexibel erweiterbar. Von der ersten Codezeile über die Frontend-Performance bis zum Go-Live lag die Umsetzung komplett in meiner Hand.</p>
+        </div>
+
+    </div>
+
+    
+</div>
+
+<a class="single-case__button-back single-case__button-back--bottom button" href="{{ backToOverview }}">Zurück zur Übersicht</a>

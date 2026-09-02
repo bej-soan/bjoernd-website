@@ -1,0 +1,16 @@
+---
+layout: page-templates/base.njk
+pagination:
+  data: cases
+  size: 1
+  alias: item
+permalink: "/{{ item.category }}/{{ item.slug }}/"
+robots: index/follow
+eleventyComputed:
+  title: "{{ item.title }}"
+  subtitle: "{{ caseCategories[item.category].title }}"
+  metaTitle: "{{ item.title }} | Björn Dammann"
+  metaDescription: "{{ item.description | striptags | safe }}"
+---
+{% set backToOverview = "/" + item.category + "/" %}
+{% include "case-content/content-" + item.slug + ".njk" %}

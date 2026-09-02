@@ -1,18 +1,32 @@
-window.onload = function(){
+// Apply the theme class immediately (before first paint), independent of how
+// long images/videos take to load. Prevents both toggle buttons from being
+// visible at once while the page is still loading (esp. on slow mobile).
+(function () {
+  const html = document.documentElement;
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+  const initialTheme = savedTheme || (prefersDark.matches ? 'dark' : 'light');
+
+  html.classList.remove('dark', 'light');
+  html.classList.add(initialTheme);
+})();
+
+document.addEventListener('DOMContentLoaded', function () {
 
   /* START THEME SWITCH */
   const html = document.documentElement;
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
 
+  const themeColors = {
+    dark: "#262B33",
+    light: "#D2D8E1"
+  };
+
   const applyTheme = (theme) => {
-    html.className = "";
+    html.classList.remove('dark', 'light');
     html.classList.add(theme, 'js');
 
     // Update Meta Theme Color
-    const themeColors = {
-      dark: "#262B33",
-      light: "#D2D8E1"
-    };
     const metaThemeColor = document.querySelector('meta[name="theme-color"]');
     if (metaThemeColor && themeColors[theme]) {
       metaThemeColor.setAttribute('content', themeColors[theme]);
@@ -26,14 +40,9 @@ window.onload = function(){
 
     Object.keys(buttons).forEach(key => {
       if (buttons[key]) {
-        if (key === theme) {
-          buttons[key].classList.add('is-active');
-        } else {
-          buttons[key].classList.remove('is-active');
-        }
+        buttons[key].classList.toggle('is-active', key === theme);
       }
     });
-
   };
 
   const setTheme = (theme) => {
@@ -50,9 +59,9 @@ window.onload = function(){
   if (lightBtn) lightBtn.addEventListener("click", goLight, false);
   if (darkBtn) darkBtn.addEventListener("click", goDark, false);
 
-  // Initial theme: manual choice wins, otherwise follow OS preference
-  const savedTheme = localStorage.getItem('theme');
-  applyTheme(savedTheme || (prefersDark.matches ? 'dark' : 'light'));
+  // Reflect the theme that was already applied synchronously above
+  // (adds 'js', sets meta color, marks the active button).
+  applyTheme(html.classList.contains('light') ? 'light' : 'dark');
 
   // Keep following OS preference live, as long as no manual choice was made
   prefersDark.addEventListener('change', event => {
@@ -67,11 +76,13 @@ window.onload = function(){
   const menuBtn = document.getElementById('menu-btn');
   const navMenu = document.getElementById('nav-menu');
 
-  menuBtn.addEventListener('click', () => {
-    const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
-    menuBtn.setAttribute('aria-expanded', !isExpanded);
-    navMenu.classList.toggle('active');
-  });
+  if (menuBtn && navMenu) {
+    menuBtn.addEventListener('click', () => {
+      const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', !isExpanded);
+      navMenu.classList.toggle('active');
+    });
+  }
   /* END MENU BTN */
 
-}
+});

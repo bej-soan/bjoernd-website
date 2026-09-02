@@ -1,0 +1,137 @@
+[
+  {
+    "category": "work",
+    "slug": "khpraxis",
+    "title": "KH Praxis",
+    "description": "<strong>Design und Code</strong> einer hochwertigen WordPress Seite mit Custom Theme für eine private Hautarztpraxis",
+    "thumbnail": "/assets/images/case-images/bd-cases_khpraxis-thumb.jpg",
+    "url": "https://khpraxis.de",
+    "urlTitle": "khpraxis.de"
+  },
+  {
+    "category": "work",
+    "slug": "daw",
+    "title": "DAW",
+    "description": "<strong>Design und Code einer WordPress Seite mit Custom Theme</strong> für die Deutsche Abfallwirtschaft GmbH",
+    "thumbnail": "/assets/images/case-images/bd-cases_daw-thumb.jpg",
+    "url": "https://daw.com",
+    "urlTitle": "daw.com"
+  },
+  {
+    "category": "work",
+    "slug": "roggeundpott",
+    "title": "Rogge und Pott",
+    "description": "<strong>WordPress Portfolio System</strong> für meine vorherige Agentur rogge und pott design",
+    "thumbnail": "/assets/images/case-images/bd-cases_roggeundpott-thumb.jpg",
+    "url": "https://roggeundpott.de",
+    "urlTitle": "roggeundpott.de"
+  },
+  {
+    "category": "work",
+    "slug": "haiq",
+    "title": "HaiQ",
+    "description": "<strong>Verspieltes Design und Coding einer WordPress Seite</strong> für eine Snowboard-, Ski- und Surfboard-Werkstatt",
+    "thumbnail": "/assets/images/case-images/bd-cases_haiq-thumb.jpg",
+    "url": "https://haiq.de",
+    "urlTitle": "haiq.de"
+  },
+  {
+    "category": "work",
+    "slug": "juttaflick",
+    "title": "Jutta Flick",
+    "description": "<strong>WordPress Seite mit Custom Theme</strong> für Stilberaterin Jutta Flick",
+    "thumbnail": "/assets/images/case-images/bd-cases_juttaflick-thumb.jpg",
+    "url": "https://www.juttaflick.de/",
+    "urlTitle": "juttaflick.de"
+  },
+  {
+    "category": "work",
+    "slug": "lebenleben",
+    "title": "Leben leben",
+    "description": "<strong>Aufbau und Pflege einer WordPress Multisite</strong> für Leben leben inkl. flexiblem Theme-System",
+    "thumbnail": "/assets/images/case-images/bd-cases_lebenleben-thumb.jpg",
+    "url": "https://lebenleben.de/",
+    "urlTitle": "lebenleben.de"
+  },
+  {
+    "category": "work",
+    "slug": "jebsenjessen",
+    "title": "JJ Trading Solutions",
+    "description": "<strong>Statische Seite auf Basis von Static Site Generator Eleventy</strong> für JJ Trading Solutions",
+    "thumbnail": "/assets/images/case-images/bd-cases_jebsenjessen-thumb.jpg",
+    "url": "https://jj-tradingsolutions.com/",
+    "urlTitle": "jj-tradingsolutions.com"
+  },
+  {
+    "category": "work",
+    "slug": "susanneschueler",
+    "title": "Health and Athletics",
+    "description": "<strong>Schlanke, aber hochwertige WordPress Seite mit Custom Theme</strong> für Personal Trainerin Susanne Schüler",
+    "thumbnail": "/assets/images/case-images/bd-cases_susanneschueler-thumb.jpg",
+    "url": "https://healthandathletics-hamburg.de/",
+    "urlTitle": "healthandathletics-hamburg.de"
+  },
+  {
+    "category": "work",
+    "slug": "drivebyheroes",
+    "title": "Drive By Heroes",
+    "description": "<strong>Design und Coding des Custom WordPress Theme</strong> für Drive By Heroes. Wer hätte gedacht dass Grunge im Webdesign wiederkommt?",
+    "thumbnail": "/assets/images/case-images/bd-cases_drivebyheroes-thumb.jpg",
+    "url": "https://drivebyheroes.de",
+    "urlTitle": "drivebyheroes.de"
+  },
+  {
+    "category": "work",
+    "slug": "weitblick",
+    "title": "Weitblick",
+    "description": "<strong>WordPress Seite mit Custom Theme</strong> für Weitblick Coaching",
+    "thumbnail": "/assets/images/case-images/bd-cases_weitblick-thumb.jpg",
+    "url": "https://derweitblick.com/",
+    "urlTitle": "derweitblick.com"
+  },
+  {
+    "category": "work",
+    "slug": "fraenkische",
+    "title": "Fränkische Group",
+    "description": "<strong>Gestaltung der Website-Screens und Komponenten-Bibliothek</strong> für die Fränkische Group",
+    "thumbnail": "/assets/images/case-images/bd-cases_fraenkische-thumb.jpg",
+    "url": "https://fraenkische-group.com",
+    "urlTitle": "fraenkische-group.com"
+  },
+  {
+    "category": "lab",
+    "slug": "trashletics",
+    "title": "Altona Trashletics",
+    "description": "Meine T-Shirt-Brand mit eigenem Webshop, Socials und Digital Advertising.",
+    "thumbnail": "/assets/images/case-images/bd-cases_trashletics-thumb.jpg",
+    "url": "https://trashletics.de/",
+    "urlTitle": "trashletics.de"
+  },
+  {
+    "category": "lab",
+    "slug": "tjh",
+    "title": "TJH Trikots",
+    "description": "Neue Trikotdesigns für meinen Heimatverein.",
+    "thumbnail": "/assets/images/case-images/bd-cases_tjh-thumb.jpg",
+    "url": "https://www.hollenstedt-handball.de/",
+    "urlTitle": "hollenstedt-handball.de"
+  },
+  {
+    "category": "lab",
+    "slug": "sneakerstores",
+    "title": "Sneaker Stores",
+    "description": "Eine filterbare Datenbank aller Sneaker Läden in Deutschland mit Affiliate-Partnern.",
+    "thumbnail": "/assets/images/case-images/bd-cases_sneakerstores-thumb.jpg",
+    "url": "https://sneaker-stores.de/",
+    "urlTitle": "sneaker-stores.de"
+  },
+  {
+    "category": "lab",
+    "slug": "license",
+    "title": "License Plate Smasher",
+    "description": "Mein erstes Spiele-Projekt ist ein simples Typing Game.",
+    "thumbnail": "/assets/images/case-images/bd-cases_license-thumb.jpg",
+    "url": "https://hirnfrost.com/games/smash/",
+    "urlTitle": "hirnfrost.com"
+  }
+]

@@ -2,11 +2,11 @@
 
 ::selection {
   background: var(--col-highlight);
-  color: var(--col-black);
+  color: var(--col--black);
 }
 ::-moz-selection {
   background: var(--col-highlight);
-  color: var(--col-black);
+  color: var(--col--black);
 }
 html {
   scroll-behavior: smooth;

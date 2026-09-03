@@ -2,6 +2,11 @@
 
 ### To Do
 
+- back button unnötig erstmal
+- mobile rahmen aus dem anderen projekt holen
+- max width für mobile festlegen
+- thumbnails größer ausgeben? eigentlich nicht
+- max width festlegen
 - mobile menu nicht schick
 
 ### Bugs

@@ -2,11 +2,12 @@
 
 ### To Do
 
-- back button unnötig erstmal
-- mobile rahmen aus dem anderen projekt holen
-- max width für mobile festlegen
-- thumbnails größer ausgeben? eigentlich nicht
 - max width festlegen
+- back button unnötig erstmal. doch nicht. nur mit dem anderen irgendwie abgleichen. mobile auf jeden fall sinnvoll. 
+- mobile rahmen aus dem anderen projekt holen
+- max width für mobile screenshots festlegen
+- current menu item styling
+- thumbnails größer ausgeben? eigentlich nicht
 - mobile menu nicht schick
 
 ### Bugs
